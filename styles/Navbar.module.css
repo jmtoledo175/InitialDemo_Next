@@ -1,0 +1,13 @@
+
+.menu-container a{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

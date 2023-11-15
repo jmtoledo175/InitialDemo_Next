@@ -1,27 +1,29 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Link from "next/link"
-export default function Home() {
+import styles from "../components/layouts/MainLayouts.module.css";
+import Link from "next/link";
+import MainLayouts from "../components/layouts/MainLayouts";
+import DarkLayout from "../components/layouts/DarkLayout";
+export default function AboutPage() {
   return (
     <>
-      <Head>
-        <title>About</title>
-        <meta name="description" content="Home page" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Ir a <Link href="/">home</Link>
-        </h1>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/about.tsx</code>
-          </p>
-        </div>
-        <div className={styles.grid}></div>
-      </main>
+      <h1 className={styles.title}>
+        Ir a <Link href="/">home</Link>
+      </h1>
+      <div className={styles.description}>
+        <p>
+          Get started by editing&nbsp;
+          <code className={styles.code}>pages/about.tsx</code>
+        </p>
+      </div>
     </>
   );
 }
+
+AboutPage.getLayout = function getLayout(page) {
+  return (
+    <>
+      <MainLayouts>
+        <DarkLayout>{page}</DarkLayout>
+      </MainLayouts>
+    </>
+  );
+};
