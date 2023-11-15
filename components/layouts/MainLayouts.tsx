@@ -1,7 +1,14 @@
 import styles from "./MainLayouts.module.css"
 import Head from "next/head";
-import NavBar from "../../components/NavBar"
-const MainLayouts = ({children}) => {
+import NavBar from "../NavBar"
+import {FC} from "react"
+
+type PropsWithChildren = {
+  children: React.ReactNode
+}
+ 
+
+const MainLayouts: FC<PropsWithChildren> = ({children}) => {
     return ( 
         <div>
             <>

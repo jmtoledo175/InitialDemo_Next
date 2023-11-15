@@ -2,6 +2,7 @@ import styles from "../components/layouts/MainLayouts.module.css";
 import Link from "next/link";
 import MainLayouts from "../components/layouts/MainLayouts";
 import DarkLayout from "../components/layouts/DarkLayout";
+import { ReactElement } from 'react';
 export default function AboutPage() {
   return (
     <>
@@ -18,7 +19,7 @@ export default function AboutPage() {
   );
 }
 
-AboutPage.getLayout = function getLayout(page) {
+AboutPage.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <MainLayouts>
